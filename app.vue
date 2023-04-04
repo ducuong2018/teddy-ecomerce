@@ -1,9 +1,6 @@
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-<script>
-export default {
-  name: "app",
-  layout: "default",
-};
-</script>
+

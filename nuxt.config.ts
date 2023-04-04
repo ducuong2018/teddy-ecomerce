@@ -1,17 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   alias: {
-    "~~": "/<rootDir>",
-    "@@": "/<rootDir>",
-    "~": "/<rootDir>",
-    "@": "/<rootDir>",
-    "@assets": "/<rootDir>/assets",
-    "@public": "/<rootDir>/public",
-    "@utils": "/<rootDir>/utils",
+    "~~": "/",
+    "@@": "/",
+    "~": "/",
+    "@": "/",
+    "@assets": "/assets",
+    "@public": "/public",
+    "@utils": "/utils",
   },
   css: [
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.min.css",
+    "@assets/style/main.scss",
   ],
   build: {
     transpile: ["vuetify"],
@@ -19,6 +20,13 @@ export default defineNuxtConfig({
   vite: {
     define: {
       "process.env.DEBUG": false,
+    },
+   
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
 });
